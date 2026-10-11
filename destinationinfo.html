@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination Details</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    /* DESTINATION PAGE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: white;
+      padding-top: 90px;
+    }
+    .header {
+      display: grid;
+      grid-template-columns: 250px 1fr 120px;
+      align-items: center;
+      background-color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 1160px;
+      z-index: 9999;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-box img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .logo-box img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+    .brand h2 {
+      font-size: 20px;
+    }
+    .brand p {
+      font-size: 10px;
+      color: grey;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      position: relative;
+      transition: 0.3s;
+    }
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background-color: orangered;
+      transition: 0.3s;
+    }
+    .nav a:hover {
+      color: orangered;
+    }
+    .nav a:hover::after {
+      width: 100%;
+    }
+    .btn-header {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-header:hover {
+      background-color: orangered;
+      transform: scale(1.05);
+    }
+    .destination-page {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .dest-heading {
+      text-align: center;
+    }
+    .page-tittle {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .page-subtittle {
+      color: #777;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .dest-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .dest-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px rgb(0, 0, 0, 0.8);
+      scroll-margin-top: 20px;
+    }
+    .dest-section img {
+      width: 100%;
+      height: 280px;
+      min-height: 350px;
+      object-fit: cover;
+    }
+    .dest-det {
+      padding: 20px;
+    }
+    .dest-det h2 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .dest-det h4 {
+      color: orangered;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .dest-det p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .dest-det ul {
+      margin: 18px;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.8;
+    }
+    .dest-det button {
+      margin-top: 15px;
+      padding: 10px 22px;
+      border: none;
+      background: #111;
+      color: #fff;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .dest-det button:hover {
+      background: orangered;
+    }
+    .footer {
+      margin-top: 10px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 768px) {
+      .header {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav {
+        display: none;
+      }
+      .dest-section {
+        grid-template-columns: 1fr;
+      }
+      .dest-section img {
+        min-height: 220px;
+      }
+    }
+  </style>
+
+  <body>
+    <header class="header">
+      <div class="logo-box">
+        <img src="image/logo.jpg" alt="GoVenture" />
+        <div class="brand">
+          <h2>GoVenture</h2>
+          <p>Explore More. Live More</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="destinationinfo.html">Destination</a>
+        <a href="index.html#features">Packages</a>
+        <a href="index.html#about">About</a>
+        <a href="contact.html" target="_blank">Contact</a>
+      </nav>
+      <a href="destinationinfo.html" target="_blank">
+        <button class="btn-header">Plan Trip</button>
+      </a>
+    </header>
+    <div class="destination-page">
+      <div class="dest-heading">
+        <h1 class="page-tittle">Trending Destination Details</h1>
+        <p class="page-subtittle">Most Loved by our Travelers this Month</p>
+      </div>
+      <div class="dest-grid">
+        <section id="bali" class="dest-section">
+          <img src="image/d1.jpg" alt="bali" />
+          <div class="dest-det">
+            <h2>Bali, Indinesia</h2>
+            <h4>From $899 | 6D / 5N</h4>
+            <p>
+              Bali has the perfect combo of Temples, Beaches & Nature. Best for
+              Family & Friends Trip.
+            </p>
+            <ul>
+              <li>Ubud Temple Tour</li>
+              <li>Nusa Penida Island</li>
+              <li>Water Sports + Spa</li>
+              <li>Hotel + Breakfast</li>
+            </ul>
+            <a href="contact.html"><button>Book Now</button></a>
+          </div>
+        </section>
+        <section id="paris" class="dest-section">
+          <img src="image/d2.jpg" alt="paris" />
+          <div class="dest-det">
+            <h2>Paris, France</h2>
+            <h4>From $1299 | 5D \ 4N</h4>
+            <p>
+              The City of Love - a dream trip with the Eiffel Tower, Louvre
+              Museum, and a Seine River cruise.
+            </p>
+            <ul>
+              <li>Eiffel Tower Entry</li>
+              <li>Louvre Museum</li>
+              <li>Seine River cruise</li>
+              <li>City Tour</li>
+            </ul>
+            <a href="contact.html"><button>Book Now</button></a>
+          </div>
+        </section>
+        <section id="dubai" class="dest-section">
+          <img src="image/d3.jpg" alt="dubai" />
+          <div class="dest-det">
+            <h2>Dubai, UAE</h2>
+            <h4>From $2999 | 7D \ 6N</h4>
+            <p>
+              Dubai's luxury experience - Burj Khalifa, Desert Safari, and
+              Marina Cruise.
+            </p>
+            <ul>
+              <li>Burj Khalifa Top</li>
+              <li>Desert Safari with BBQ</li>
+              <li>Marina Dhow Cruise</li>
+              <li>Hotel + Breakfast</li>
+            </ul>
+            <a href="contact.html"><button>Book Now</button></a>
+          </div>
+        </section>
+        <section id="maldives" class="dest-section">
+          <img src="image/d4.jpg" alt="maldives" />
+          <div class="dest-det">
+            <h2>Maldives</h2>
+            <h4>From $1699 | 7D \ 6N</h4>
+            <p>
+              Private water villa, crystal-clear blue water and total privacy.
+              Best for couples.
+            </p>
+            <ul>
+              <li>Water Villa Stay</li>
+              <li>Snorkeling Tour</li>
+              <li>Dolphin Watching</li>
+              <li>All Meals</li>
+            </ul>
+            <a href="contact.html"><button>Book Now</button></a>
+          </div>
+        </section>
+        <section id="swizerland" class="dest-section">
+          <img src="image/d5.jpg" alt="swizerland" />
+          <div class="dest-det">
+            <h2>Swizerland</h2>
+            <h4>From $1899 | 6D \ 5N</h4>
+            <p>
+              Snow-capped mountains, beautiful lakes and scenic train journeys -
+              a perfect winter experience.
+            </p>
+            <ul>
+              <li>MT. Titlis with Cable Car</li>
+              <li>Lucerne & Zurich Tour</li>
+              <li>Swiss Train Ride</li>
+              <li>Hotel + Breakfast</li>
+            </ul>
+            <a href="contact.html"><button>Book Now</button></a>
+          </div>
+        </section>
+      </div>
+      <div class="footer">
+        <p>&COPY;2026 A.H | All Rights Reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
